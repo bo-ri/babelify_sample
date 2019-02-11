@@ -3,7 +3,7 @@ var babelify = require('babelify');
 var fs = require('fs');
 
 browserify({debug: true})
-  // .transform(babelify)
+  .transform(babelify)
   .require('./index.js', {entry: true})
   .bundle()
   .on('error', function(err){
