@@ -1,6 +1,7 @@
 var moment = require('moment');
 var _ = require('lodash');
 var es_module = require('module');
+var debug = require('debug');
 
 function sample(cb){
   console.log(1);

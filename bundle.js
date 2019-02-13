@@ -4,11 +4,11 @@ var fs = require('fs');
 
 browserify({debug: true})
   .transform(babelify)
-  .require('./index.js', {entry: true})
+  .require('./moment.js', {entry: true})
   .bundle()
   .on('error', function(err){
     console.log('ERROR' + err.message);
   })
-  .pipe(fs.createWriteStream('./build.js'));
+  .pipe(fs.createWriteStream('./build-moment.js'));
 
 
